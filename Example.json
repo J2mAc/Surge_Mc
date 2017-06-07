@@ -1,0 +1,77 @@
+# Surge_Mc
+{
+    "Configuration": {
+        "Author": "BurpSuite",
+        "Version": "4.0"
+    },
+    "Arguments": {
+        "MITM": "true,0077DDD9,https://raw.githubusercontent.com/J2mAc/MIMT/master/J2mAc_MIMT",
+        "External": "true,BurpSuite@0.0.0.0:6170",
+        "MacOS": "true,1.2.3.4,5.6.7.8,3040,5030",
+        "DNS": "true,223.5.5.5,223.6.6.6,119.29.29.29,114.114.114.114"
+    },
+    "General": {
+        "EnhancedMode": true,
+        "ExcludeHost": true,
+        "WIFIAccess": true,
+        "Replica": false,
+        "URLREGEX": true,
+        "IPCIDR6": true,
+        "USERAGENT": true,
+        "IPV6": false,
+        "Rule": true
+    },
+    "Info": {
+        "SERVER": [
+            "Direct = direct",
+            "US1 = custom,173.82.2.223,30698,rc4-md5,5NSROU,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module",
+            "US2 = custom,192.169.6.172,30698,rc4-md5,5NSROU,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module",
+            "US3 = custom,45.35.164.50,30698,rc4-md5,5NSROU,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module",
+            "US4 = custom,103.76.107.35,30698,rc4-md5,5NSROU,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module",
+            "US5 = custom,170.178.165.135,30698,rc4-md5,5NSROU,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module",
+            "US6 = custom,144.172.92.233,30698,rc4-md5,5NSROU,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module",
+            "HK1 = custom,47.90.99.226,30698,rc4-md5,5NSROU,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module",
+            "HK2 = custom,27.0.232.146,30698,rc4-md5,5NSROU,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module",
+            "HK3 = custom,27.0.232.149,30698,rc4-md5,5NSROU,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module",
+            "HK4 = custom,218.255.101.103,30698,rc4-md5,5NSROU,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module",
+            "JP1 = custom,106.184.7.131,30698,rc4-md5,5NSROU,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module",
+            "JP2 = custom,160.16.239.141,30698,rc4-md5,5NSROU,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module",
+            "JP3 = custom,45.76.111.166,30698,rc4-md5,5NSROU,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module",
+            "JP4 = custom,210.237.148.216,30698,rc4-md5,5NSROU,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module",
+            "JP5 = custom,139.162.121.145,30698,rc4-md5,5NSROU,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module",
+            "TW1 = custom,61.216.107.192,30698,rc4-md5,5NSROU,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module",
+            "TW2 = custom,125.227.85.104,30698,rc4-md5,5NSROU,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module",
+            "SG1 = custom,47.88.225.232,30698,rc4-md5,5NSROU,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module",
+            "SG2 = custom,188.166.183.13,30698,rc4-md5,5NSROU,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module",
+            "KR1 = custom,1.234.31.102,30698,rc4-md5,5NSROU,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module",
+            "VN1 = custom,203.162.2.201,30698,rc4-md5,5NSROU,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module",
+            "RU1 = custom,92.223.72.143,30698,rc4-md5,5NSROU,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module",
+            "PH = custom,116.93.119.175,30698,rc4-md5,5NSROU,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module",
+            "AU = custom,159.100.24.184,30698,rc4-md5,5NSROU,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module"
+        ],
+        "Group": [
+            "Proxy = select,Direct,Proxy A",
+            "Proxy A = select,Auto US,Auto HK,Auto JP,Auto TS,Auto OTHER,US1,US2,US3,US4,US5,US6,HK1,HK2,HK3,HK4,JP1,JP2,JP3,JP4,JP5,TW1,TW2,SG1,SG2,KR1,VN1,RU1,PH,AU",
+            "Proxy B = select,Direct,US1,US2,US3,US4,US5,US6,HK1,HK2,HK3,HK4,JP1,JP2,JP3,JP4,JP5,TW1,TW2,SG1,SG2,KR1,VN1,RU1,PH,AU",
+            "Auto US = url-test,US1,US2,US3,US4,US5,US6, url = http://www.gstatic.com/generate_204, interval = 600, tolerance = 200, timeout = 5",
+            "Auto HK = url-test,HK1,HK2,HK3,HK4, url = http://www.gstatic.com/generate_204, interval = 600, tolerance = 200, timeout = 5",
+            "Auto JP = url-test,JP1,JP2,JP3,JP4,JP5, url = http://www.gstatic.com/generate_204, interval = 600, tolerance = 200, timeout = 5",
+            "Auto TS = url-test,TW1,TW2,SG1,SG2, url = http://www.gstatic.com/generate_204, interval = 600, tolerance = 200, timeout = 5",
+            "Auto OTHER = url-test,KR1,VN1,RU1,PH,AU, url = http://www.gstatic.com/generate_204, interval = 600, tolerance = 200, timeout = 5"
+        ]
+    },
+    "SUFFIX": {
+        "Apple": "Proxy B",
+        "Proxy": "Proxy US",
+        "KEYWORD": "Proxy",
+        "URLREGEX": "Proxy US",
+        "USERAGENT": "Proxy B",
+        "IPCIDR6": "Proxy US",
+        "IPCIDR": "Proxy US",
+        "Other": "Proxy US"
+    },
+    "Other": {
+        "Module": "https://raw.githubusercontent.com/BurpSuite/RuleList/master/Module/Module",
+        "List": "https://raw.githubusercontent.com/BurpSuite/RuleList/master/Developers.json"
+    }
+}
